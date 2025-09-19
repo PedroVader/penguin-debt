@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PenguinDebt Design System - Financial Trust & Conversion Optimization */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+    --surface: 0 0% 98%;
+    
+    /* Conversion Blue - Primary CTA Color */
+    --conversion-blue: 215 100% 50%;
+    --conversion-blue-hover: 215 100% 45%;
+    --conversion-blue-foreground: 0 0% 100%;
+    
+    /* Financial Trust Colors */
+    --trust-green: 145 70% 45%;
+    --trust-green-light: 145 50% 95%;
+    
+    /* Content Hierarchy */
+    --text-primary: 220 15% 15%;
+    --text-secondary: 220 10% 40%;
+    --text-muted: 220 8% 60%;
+    
+    /* UI Elements */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --border: 220 8% 92%;
+    --border-subtle: 220 8% 96%;
+    --input: 220 8% 96%;
+    --ring: 215 100% 50%;
+    
+    /* Legacy mappings for shadcn compatibility */
+    --primary: 215 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 8% 96%;
+    --secondary-foreground: 220 15% 15%;
+    --muted: 220 8% 96%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 220 8% 96%;
+    --accent-foreground: 220 15% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Design System Tokens */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--surface)) 0%, hsl(var(--border-subtle)) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(var(--conversion-blue)) 0%, hsl(var(--conversion-blue-hover)) 100%);
+    
+    /* Shadows */
+    --shadow-card: 0 2px 12px -4px hsl(var(--text-primary) / 0.08);
+    --shadow-cta: 0 4px 20px -6px hsl(var(--conversion-blue) / 0.3);
+    --shadow-hover: 0 8px 32px -8px hsl(var(--text-primary) / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+/* Typography & Component Styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-inter antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-primary font-semibold tracking-tight;
+  }
+  
+  p {
+    @apply text-text-secondary leading-relaxed;
+  }
+}
+
+@layer components {
+  /* CTA Button Variants */
+  .cta-primary {
+    @apply bg-gradient-to-r from-conversion-blue to-conversion-blue-hover text-conversion-blue-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-cta hover:shadow-hover transition-all duration-300 hover:scale-105 active:scale-95;
+  }
+  
+  .cta-secondary {
+    @apply bg-surface border-2 border-border text-text-primary px-6 py-3 rounded-lg font-medium hover:bg-border-subtle hover:shadow-card transition-all duration-300;
+  }
+  
+  .phone-cta {
+    @apply bg-conversion-blue text-conversion-blue-foreground px-6 py-3 rounded-lg font-semibold hover:bg-conversion-blue-hover transition-all duration-300 hover:shadow-cta;
+  }
+  
+  /* Card Styles */
+  .trust-card {
+    @apply bg-card border border-border-subtle rounded-lg p-6 shadow-card hover:shadow-hover transition-all duration-300;
+  }
+  
+  .step-card {
+    @apply text-center p-8 rounded-lg bg-surface border border-border-subtle hover:bg-card transition-all duration-300;
+  }
+  
+  /* Trust Indicators */
+  .trust-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-trust-green-light text-trust-green rounded-full text-sm font-medium;
+  }
+  
+  .trust-row {
+    @apply flex items-center gap-6 text-text-muted text-sm;
+  }
+  
+  /* Section Layouts */
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  /* Animations */
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out;
+  }
+  
+  /* Sticky Header States */
+  .header-sticky {
+    @apply backdrop-blur-lg bg-background/95 border-b border-border-subtle;
+  }
+}
