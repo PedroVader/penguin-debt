@@ -69,12 +69,12 @@ const FAQ = () => {
         </div>
 
         <div className="text-center">
-          <Link
-            to="/apply-now"
+          <a
+            href="https://apply.penguindebt.com/debt/?v=2972&aid=182&sub1=1821#debt_amount"
             className="cta-primary"
           >
             See If You're Eligible
-          </Link>
+          </a>
         </div>
       </div>
     </section>

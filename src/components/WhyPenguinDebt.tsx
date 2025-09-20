@@ -82,12 +82,12 @@ const WhyPenguinDebt = () => {
               </div>
             </div>
 
-            <Link
-              to="/apply-now"
+            <a
+              href="https://apply.penguindebt.com/debt/?v=2972&aid=182&sub1=1821#debt_amount"
               className="cta-primary w-full text-center block"
             >
               Get Started Today
-            </Link>
+            </a>
           </div>
         </div>
       </div>

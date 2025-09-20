@@ -18,13 +18,16 @@ const Hero = () => {
 
           {/* Primary CTA */}
           <div className="mb-8 animate-scale-in">
-            <Link
-              to="/apply-now"
-              className="cta-primary inline-block"
-            >
-              Check My Eligibility
-            </Link>
-          </div>
+          <a
+            href="https://apply.penguindebt.com/debt/?v=2972&aid=182&sub1=1821#debt_amount"
+            className="cta-primary inline-block"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Check My Eligibility
+          </a>
+        </div>
+
 
           {/* Trust Row */}
           <div className="trust-row justify-center mb-12 animate-fade-up">

@@ -14,13 +14,13 @@ const FinalCTA = () => {
             Join thousands of Americans who've found financial relief through our trusted network of debt specialists.
           </p>
 
-          <Link
-            to="/apply-now"
+          <a
+            href="https://apply.penguindebt.com/debt/?v=2972&aid=182&sub1=1821#debt_amount"
             className="inline-flex items-center gap-3 bg-white text-conversion-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-all duration-300 hover:scale-105 shadow-lg"
           >
             Check Eligibility Now
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </a>
 
           <div className="mt-8 flex items-center justify-center gap-8 text-white/80 text-sm">
             <span>✓ Free Assessment</span>
