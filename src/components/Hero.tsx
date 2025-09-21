@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-16 bg-gradient-hero">
+    <section className="pt-40 pb-16 bg-gradient-hero">
       <div className="section-container">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Headlines */}
