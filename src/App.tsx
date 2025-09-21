@@ -9,6 +9,8 @@ import NotFound from "./pages/NotFound";
 import Terms from "./pages/Terms";  // ← Asegúrate de que esta línea esté
 import Privacy from "./pages/Privacy";
 import Disclaimer from "./pages/Disclaimer";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,8 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />  {/* ← Asegúrate de que esta línea esté */}
           <Route path="/privacy" element={<Privacy />} />  {/* ← Asegúrate de que esta línea esté */}
           <Route path="/disclaimer" element={<Disclaimer />} />  {/* ← Asegúrate de que esta línea esté */}
+          <Route path="/blog" element={<Blog />} />  {/* ← Asegúrate de que esta línea esté */}
+          <Route path="/blog/:slug" element={<BlogPost />} />  {/* ← Asegúrate de que esta línea esté */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
