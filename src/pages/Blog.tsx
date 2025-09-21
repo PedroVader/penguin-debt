@@ -149,7 +149,7 @@ const Blog = () => {
 
         {/* Newsletter CTA */}
         <div className="mt-16 bg-text-primary rounded-lg p-8 text-center text-white">
-          <h3 className="text-2xl font-bold mb-4">
+          <h3 className="text-2xl font-bold mb-4 text-white">
             Get Financial Tips Delivered to Your Inbox
           </h3>
           <p className="mb-6 text-gray-300">
